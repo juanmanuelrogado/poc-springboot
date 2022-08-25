@@ -49,7 +49,7 @@ docker run -itd --name poc-springboot -p 8080:8080 liferay/dxp:7.4.13-u38
 
 
 ### Import Postman collection
-Import in Postman the collection included in ./postman/PoC Spring Boot.postman_collection.json
+Import in Postman the collection included in [postman/PoC Spring Boot.postman_collection.json] (postman/PoC%20Spring%20Boot.postman_collection.json)
 
 There are two HTTP requests included: 
 - Test API Call to Liferay: direct access to Liferay APIs
