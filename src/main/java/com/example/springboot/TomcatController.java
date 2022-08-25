@@ -26,8 +26,8 @@ public class TomcatController {
 
 	@GetMapping("/get-users")
 	public String getUsers(@RequestHeader Map<String, String> headers) throws Exception {
-	    System.out.println("**** GETTING USERS ****");
-	       
+		System.out.println("**** GETTING USERS ****");
+   
 		String usersJson = callGetUsers(headers.get("authorization"));
 		
 		return usersJson;
@@ -36,8 +36,8 @@ public class TomcatController {
 	@PostMapping("/some-post-api")
 	public HttpStatus somePostApi(@RequestHeader Map<String, String> headers, @RequestBody String body) throws Exception {
 		headers.forEach((key, value) -> {
-	        System.out.println(String.format("Header '%s' = %s", key, value));
-	    });
+			System.out.println(String.format("Header '%s' = %s", key, value));
+		});
 	    
 	    System.out.println("Body: " + body);
 
@@ -46,14 +46,13 @@ public class TomcatController {
 	    return HttpStatus.OK;
 	}
 
-	private static String callGetUsers(String bearer) throws Exception 
-    {
+	private static String callGetUsers(String bearer) throws Exception {
 		System.out.println("*** CALLING API GETUSERS ***");
-    	String result = "";
+		String result = "";
 		
 	    try
 	    {
-		    HttpClient client = new DefaultHttpClient();
+			HttpClient client = new DefaultHttpClient();
 	    	HttpGet request = new HttpGet("http://localhost:8080/o/headless-admin-user/v1.0/user-accounts");
 	    	
 	    	// Propagate OAuth2 access token
