@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "538ad783-efc8-4c5a-8422-49f9548aa9f1",
+		"name": "PoC Spring Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test API Call to Spring Boot",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "POC-Springboot",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "myapp://myapp",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "code_verifier",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8080/o/oauth2/authorize",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/o/oauth2/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9080/get-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"get-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test API Call to Liferay",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "POC-Springboot",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "myapp://myapp",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code_with_pkce",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "code_verifier",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:8080/o/oauth2/authorize",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/o/oauth2/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/o/headless-admin-user/v1.0/user-accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"o",
+						"headless-admin-user",
+						"v1.0",
+						"user-accounts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "abc123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "test@liferay.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
