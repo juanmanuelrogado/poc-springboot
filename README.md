@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Proof of Concept for using a Spring Boot service as a bridge to calling Liferay Headless APIs, in a LXC scope, and using OAuth2 Authorization with PCKE flow.
+Proof of Concept to use a Spring Boot service as a bridge to call Liferay Headless APIs, in a LXC scope, using OAuth2 Authorization with PCKE flow.
 
 The use case will be some web or mobile app getting an OAuth2 access token for a logged user, and calling a Spring Boot service, which will call the Liferay APIs propagating the access token.
 
-For this PoC we won't implement the web client, using Postman for the original request instead (Postman collection included).
+For this PoC we won't implement the web client, but will use Postman for the original request instead.
 
 ## Install
 ### Checkout the project:
@@ -44,8 +44,8 @@ docker run -itd --name poc-springboot -p 8080:8080 liferay/dxp:7.4.13-u38
     - **TRUSTED APPLICATION**: true
 
 - After submit: 
-    - edit client_id, and set value "**POC-Springboot**"
-    - edit Scopes and enable **Liferay.Headless.Admin.User.everything**
+    - edit **client_id**, and set value "**POC-Springboot**"
+    - edit **Scopes** and enable **Liferay.Headless.Admin.User.everything**
 
 
 ### Import Postman collection
